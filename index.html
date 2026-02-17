@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Орешкин Алексей Владимирович — CV</title>
+    <meta name="description"
+          content="Резюме: Технический бизнес-аналитик (FinTech / Crypto: Payments, Exchanges, OTC). OTC, интеграции с биржами/провайдерами, AML, риск/ликвидность, roadmap, запуск в прод."/>
+
+    <!-- Если НЕ хочешь индексацию поисковиками — раскомментируй: -->
+    <!-- <meta name="robots" content="noindex, nofollow"> -->
+
+    <style>
+        :root {
+            --max: 1080px;
+            --bg: #ffffff;
+            --text: #121212;
+            --muted: rgba(18, 18, 18, .72);
+            --line: rgba(18, 18, 18, .12);
+            --card: rgba(18, 18, 18, .04);
+            --chip: rgba(18, 18, 18, .06);
+            --radius: 18px;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+            line-height: 1.45;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        a:hover { opacity: .85; }
+
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 24px 16px 64px;
+        }
+
+        header {
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: var(--radius);
+            padding: 18px 18px 16px;
+        }
+
+        .top {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .name {
+            margin: 0;
+            font-weight: 850;
+            font-size: 28px;
+            letter-spacing: .2px;
+        }
+
+        .subtitle {
+            margin: 6px 0 0;
+            font-size: 15px;
+            color: var(--muted);
+        }
+
+        .badges {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 10px;
+            border-radius: 999px;
+            background: var(--chip);
+            border: 1px solid var(--line);
+            font-size: 13px;
+            color: rgba(18, 18, 18, .86);
+            text-decoration: none;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            border: 1px solid var(--line);
+            background: #fff;
+            border-radius: 12px;
+            padding: 10px 12px;
+            text-decoration: none;
+            font-weight: 650;
+            font-size: 14px;
+        }
+
+        .btn.primary { background: rgba(18, 18, 18, .06); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1.35fr .65fr;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        @media (max-width: 920px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+
+        .card {
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            background: #fff;
+            padding: 16px;
+        }
+
+        .card.soft { background: var(--card); }
+
+        .section-title {
+            margin: 0 0 10px;
+            font-size: 13px;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: rgba(18, 18, 18, .72);
+        }
+
+        .kpi {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        @media (max-width: 920px) {
+            .kpi { grid-template-columns: 1fr; }
+        }
+
+        .kpi .item {
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 10px 12px;
+            background: #fff;
+        }
+
+        .kpi .item .h {
+            font-size: 12px;
+            color: var(--muted);
+            margin-bottom: 2px;
+        }
+
+        .kpi .item .v {
+            font-size: 15px;
+            font-weight: 750;
+        }
+
+        .list {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .list li { margin: 6px 0; }
+
+        .exp {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .role-title {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 12px;
+            align-items: baseline;
+            justify-content: space-between;
+            margin: 0 0 6px;
+        }
+
+        .role-title .pos {
+            font-weight: 800;
+            font-size: 16px;
+        }
+
+        .role-title .period {
+            font-size: 13px;
+            color: var(--muted);
+            white-space: nowrap;
+        }
+
+        .company { font-weight: 650; }
+
+        .meta {
+            color: var(--muted);
+            font-size: 13px;
+            margin: 0 0 10px;
+        }
+
+        .small {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        footer {
+            margin-top: 16px;
+            color: var(--muted);
+            font-size: 12px;
+            text-align: center;
+        }
+
+        .photo {
+            width: 100%;
+            display: block;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+            background: #fff;
+            margin-bottom: 14px;
+        }
+
+        @media print {
+            .actions { display: none; }
+            header, .card { break-inside: avoid; }
+            a { text-decoration: none; }
+        }
+    </style>
+</head>
+
+<body>
+<div class="wrap">
+    <header>
+        <div class="top">
+            <div>
+                <h1 class="name">Орешкин Алексей Владимирович</h1>
+                <div class="subtitle">
+                    Технический бизнес-аналитик (FinTech / Crypto: Payments, Exchanges, OTC)
+                </div>
+
+                <div class="badges">
+                    <span class="chip">Санкт-Петербург, м. Проспект Просвещения</span>
+                    <span class="chip">Удалённо / гибрид</span>
+                    <span class="chip">Готов к переезду · редкие командировки</span>
+                </div>
+            </div>
+
+            <div class="actions">
+                <!-- Если у тебя PDF называется иначе — поменяй имя файла ниже -->
+                <a class="btn primary" href="cv.pdf" download>Скачать PDF</a>
+                <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Открыть PDF</a>
+            </div>
+        </div>
+
+        <div class="kpi">
+            <div class="item">
+                <div class="h">Возраст / дата рождения</div>
+                <div class="v">46 лет · 5 июля 1979</div>
+            </div>
+            <div class="item">
+                <div class="h">Специализация</div>
+                <div class="v">Бизнес-аналитик</div>
+            </div>
+            <div class="item">
+                <div class="h">Тип занятости</div>
+                <div class="v">Полная · Частичная · Проектная</div>
+            </div>
+        </div>
+    </header>
+
+    <div class="grid">
+        <main class="card">
+            <h2 class="section-title">Обо мне</h2>
+            <ul class="list">
+                <li>Работаю на стыке бизнеса и разработки: собираю требования стейкхолдеров и перевожу их в реализуемые решения.</li>
+                <li>Описываю бизнес-сценарии и правила: лимиты, комиссии, курсы, статусы операций, риск-ограничения, AML/KYC-контуры.</li>
+                <li>Декомпозирую требования в backlog, формирую приоритеты, определяю критерии приемки.</li>
+                <li>Детализирую интеграции до уровня реализации: API-контракты, модели данных, маппинг полей/статусов/ошибок, state machine операций.</li>
+                <li>Прорабатываю сценарии отказов: таймауты, ретраи/backoff, rate limits, деградация при недоступности провайдера; веду sandbox-&gt;prod, запуск и поддержку.</li>
+                <li>Обеспечиваю финансовую корректность: сверку операций/балансов, контроль комиссий и расхождений, регламенты исправлений; координирую кросс-функциональные команды и инициирую улучшения по надежности (резервирование, мониторинг).</li>
+                <li>Бизнес формулирует цель (рост, снижение рисков, ускорение процессов). Я анализирую текущие процессы и данные, определяю разрывы, формирую целевую модель (to-be), описываю требования и сопровождаю внедрение до результата.</li>
+            </ul>
+
+            <div style="height:14px"></div>
+            <h2 class="section-title">Опыт</h2>
+
+            <div class="exp">
+                <section class="card soft">
+                    <div class="role-title">
+                        <div class="pos">Технический бизнес-аналитик</div>
+                        <div class="period">Апр 2022 — Ноя 2024 · 2 г 8 мес</div>
+                    </div>
+                    <div class="company">Synergy of Lake Technology (quickex.io/ru) · Республика Сейшельские острова</div>
+                    <p class="meta">
+                        Крупный онлайн-сервис обмена криптовалют.
+                        Пришёл на стадии «обменник» и запустил трансформацию в платформенную экосистему (exchange + wallet + nodes + listing + matching + bots + партнёрское подключение).
+                        Вёл продукт end-to-end: стратегия и roadmap, приоритизация, постановка требований, релизы на проде.
+                        Отвечал за финансовую устойчивость (риски/ликвидность), маржинальность и операционную эффективность.
+                        <br/><br/>
+                        Масштаб: оборот ~$70 млн/мес, маржинальность 1–3%, медианный чек ~$6 000, разовые OTC-сделки до $10 млн, команда ~20 человек.
+                    </p>
+
+                    <ul class="list">
+                        <li>Вёл интеграции с биржами и провайдерами: сбор требований, согласование API-контрактов, маппинг статусов/ошибок, описание сценариев отказов и тест-кейсов; запуск и сопровождение прод-интеграций для депозитов/выводов и OTC-процессов.</li>
+                        <li>Инициировал программу снижения контрагентских и операционных рисков: дублирование критически важных контуров (альтернативные биржевые договоры, независимый обменник/инфраструктура, разнесение по юрлицам). Позже это предотвратило простой бизнеса при закрытии одного из обменников.</li>
+                        <li>Проработал необходимость интеграции с AML-провайдерами и требования к процессам/данным: Elliptic, Chainalysis, Crystal Blockchain.</li>
+                        <li>Анализировал инфраструктурные решения для быстрых переводов и управления крипто-активами (MPC/custody/transfer): Сobo, Fireblocks; готовил выводы и требования для внедрения в операционный контур.</li>
+                        <li>Сравнивал биржи и формировал обоснование следующих интеграций: ликвидность, объёмы торгов, доступные инструменты/сети, операционные риски и стоимость обслуживания.</li>
+                        <li>Организовал сверку операций и балансов: контроль комиссий, курсов и статусов, разбор расхождений и регламенты исправлений с участием финансового и технического контуров.</li>
+                        <li>Проектировал и описывал роботов для исполнения операций обмена и поддержания требуемой ликвидности по активам;</li>
+                        <li>Разработал механизм сведения встречных ордеров при низкой ликвидности (учёт специфики обменника, а не биржи).</li>
+                        <li>Сформировал и защитил перед руководством дорожную карту развития: wallet+earn для привлечения внешней ликвидности, модуль статистики и прогнозирования, балансировщик потребности в активах, фонд привлечения ликвидности; планы и схемы вел в Miro.</li>
+                        <li>Предложил вынести часть активов на собственные ноды и развивать маркет-мейкинг по отдельным монетам; оценивал влияние на ликвидность и риски.</li>
+                        <li>Определил стратегию запуска собственного мониторинга и подключения к агрегаторам без конфликта с BestChange; сформулировал шаги вывода в работу.</li>
+                        <li>Инициировал продуктовую гипотезу: B2B-софт для обменников как дополнительный источник дохода и фактор устойчивости бизнеса.</li>
+                    </ul>
+
+                    <p class="meta" style="margin-top:10px;"><b>Результат работы в цифрах:</b></p>
+                    <ul class="list">
+                        <li>Сведение встречных ордеров: дало +0,2 п.п. к маржинальности на перекрываемых объёмах</li>
+                        <li>Снижение минимального лимита на сделку: практически удвоило количество обменов, при незначительном снижении медианного чека и росте суммарного месячного объёма ~на 20%.</li>
+                        <li>Распределённая обработка крупных заявок: сняла ограничение по максимальному объёму и позволила исполнять заявки до ~$10 млн; отклонение итогового курса от референсного обычно укладывалось в диапазон ~0,5–2% , среднее время исполнения — до ~1 часа.</li>
+                    </ul>
+                </section>
+
+                <section class="card soft">
+                    <div class="role-title">
+                        <div class="pos">Consultant / Technical Product &amp; Integrations (FinTech/Crypto)</div>
+                        <div class="period">Ноя 2016 — Апр 2022 · 5 л 6 мес</div>
+                    </div>
+                    <div class="company">Independent Consultant · Санкт-Петербург</div>
+
+                    <ul class="list">
+                        <li>Консультировал предпринимателей по запуску и масштабированию криптообменников: бизнес-модель, требования к архитектуре, подбор ликвидности и платежных контуров, построение операционных регламентов.</li>
+                        <li>Прорабатывал интеграции с внешними источниками (биржи/провайдеры): маппинг данных, сценарии ошибок, контроль лимитов и устойчивость цепочек.</li>
+                        <li>Разрабатывал торговые алгоритмы и модели риск-менеджмента (волатильность, корреляции, просадки, стресс-сценарии) для FX/крипто/фондового рынка — как часть инфраструктуры принятия решений.</li>
+                    </ul>
+                </section>
+
+                <section class="card soft">
+                    <div class="role-title">
+                        <div class="pos">Product owner</div>
+                        <div class="period">Ноя 2014 — Окт 2016 · 2 года</div>
+                    </div>
+                    <div class="company">Инвестиционный фонд Si-14 (si-14.com/) · Новосибирск</div>
+                    <p class="meta">
+                        Создание отдела алгоритмической торговли с нуля для управления средствами клиентов.
+                    </p>
+
+                    <ul class="list">
+                        <li>Запустил самостоятельное подразделение по разработке, тестированию и внедрению инвестиционных/алгоритмических стратегий с привязкой к индивидуальному риск-профилю клиентов; сформировал команду, метрики и контур управления, затем передал систему в операционное управление.</li>
+                        <li>Сформировал команду аналитиков/разработчиков/трейдеров: требования к компетенциям, подбор, технические интервью, запуск работы без внешних подрядчиков.</li>
+                        <li>Определил KPI и метрики эффективности стратегий; выстроил подход к их агрегации в продуктовые “алгоритмические портфели”.</li>
+                        <li>Построил клиентскую сегментацию и риск-моделирование: цели, горизонт, допустимые просадки; настроил сопоставление стратегий риск-профилям.</li>
+                        <li>Провёл аудит и ранжирование стратегий по риск/доходность/волатильность; сформировал основу продуктовой линейки стратегий.</li>
+                        <li>Сформировал roadmap развития подразделения (автоматизация, аналитические панели, внедрение моделей) и стандарты работы.</li>
+                        <li>Передал подразделение на постоянное управление: документация, регламенты, инструкции, контроль и устойчивости процессов.</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <aside class="card">
+            <img class="photo" src="photo.jpg" alt="Орешкин Алексей Владимирович" loading="lazy"/>
+            <h2 class="section-title">Контакты</h2>
+            <div style="display:grid; gap:8px;">
+                <div><b>Телефон:</b> <span class="small">+7 (965) 0982150</span></div>
+                <div><b>Email:</b> <a href="mailto:news-piter@mail.ru">news-piter@mail.ru</a></div>
+                <div><b>Telegram:</b> <a href="https://t.me/oreshkinalexey" target="_blank" rel="noopener">@oreshkinalexey</a></div>
+                <div class="small">Гражданство: Россия · Разрешение на работу: Россия</div>
+            </div>
+
+            <div style="height:14px"></div>
+            <h2 class="section-title">Навыки</h2>
+            <div class="badges" style="margin-top:0;">
+                <span class="chip">Системный подход</span>
+                <span class="chip">Управление командой</span>
+                <span class="chip">Стратегическое планирование</span>
+                <span class="chip">Разработка нового продукта</span>
+            </div>
+
+            <div style="height:14px"></div>
+            <h2 class="section-title">Образование</h2>
+            <div style="display:grid; gap:10px;">
+                <div>
+                    <div><b>2013 · Высшее</b></div>
+                    <div class="small">Межрегиональный институт экономики и права, Санкт-Петербург</div>
+                    <div class="small">Экономический, Бизнес-информатика</div>
+                </div>
+                <div>
+                    <div><b>2005 · Курсы</b></div>
+                    <div class="small">Курсы по продажам, управлению, рекламе, страхованию, инвестициям</div>
+                    <div class="small">Росгосстрах, Ресо, ОТП Банк, Ренессанс, РМЭС, Яндекс</div>
+                </div>
+            </div>
+
+            <div style="height:14px"></div>
+            <h2 class="section-title">Языки</h2>
+            <ul class="list" style="margin:0;">
+                <li>Русский — Родной</li>
+                <li>Английский — A1 — Начальный</li>
+            </ul>
+
+            <div style="height:14px"></div>
+            <h2 class="section-title">Дополнительно</h2>
+            <ul class="list" style="margin:0;">
+                <li>Опыт вождения: Имеется собственный автомобиль</li>
+                <li>Права категории B</li>
+            </ul>
+        </aside>
+    </div>
+
+    <footer>
+        Резюме обновлено: 17 февраля 2026 · 13:35.
+    </footer>
+</div>
+</body>
+</html>
